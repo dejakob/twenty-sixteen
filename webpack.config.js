@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
     module: {
         loaders: [
             {
@@ -7,19 +7,17 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 query: {
+                    plugins: ['transform-regenerator'],
                     presets: ['react', 'es2015', 'stage-0']
                 }
             },
             {
                 test: /\.svg$/,
-                loader: 'react-svg',
-                query: {
-                    jsx: true
-                }
+                loader: 'svg-loader'
             }
         ]
     },
     output: {
         filename: './dist/twenty-sixteen.js'
     }
-}
+};

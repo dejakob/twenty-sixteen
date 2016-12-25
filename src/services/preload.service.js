@@ -11,15 +11,20 @@ class PreloadService {
             return new Promise((resolve, reject) => {
                 const img = new Image();
 
+                img.src = imgSrc;
                 img.onload = () => {
                     resolve(imgSrc);
                 };
             });
         };
 
+        console.log('start preload');
+
         for (let imgSrc of PreloadService._images) {
             await preload(imgSrc);
         }
+
+        console.log('preload done');
 
         PreloadService._handlers.forEach(handler => handler());
     }

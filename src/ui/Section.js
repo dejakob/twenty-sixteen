@@ -41,7 +41,11 @@ class Section extends Component {
         return {
             zIndex: 1,
             minHeight: '100%',
-            width: '100%'
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column'
         };
     }
 

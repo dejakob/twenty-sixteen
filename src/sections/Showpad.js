@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section } from '../ui';
+import { Section, CalendarDay, H1 } from '../ui';
 
 class Showpad extends Component
 {
@@ -8,7 +8,15 @@ class Showpad extends Component
             <Section
                 backgroundImage="dist/falling.jpg"
             >
-                <div></div>
+                <CalendarDay
+                    month="January"
+                    day={15}
+                />
+                <H1>
+                    <span>
+                        Getting <i className="fa fa-fire-extinguisher" /> at Showpad
+                    </span>
+                </H1>
             </Section>
         );
     }

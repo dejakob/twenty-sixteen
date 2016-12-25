@@ -27,8 +27,6 @@ class PreloadService {
 
     static update () {
         PreloadService._handlers.forEach(handler => handler());
-
-        setTimeout(PreloadService.update, 3000);
     }
 
     static onReady (handler) {

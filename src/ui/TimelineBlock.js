@@ -12,19 +12,41 @@ class TimelineBlock extends Component
 {
     constructor () {
         super();
-        ScrollService.on(({ top }) => this.setState({ scrollTop: top }));
-        PreloadService.onReady(() => {
-            const domNode = findDOMNode(this);
+        this.state = { scrollTop: 0, top: 0, height: 0, width: 0, bottom: 0, right: 0, left: 0 };
+        ScrollService.on(({ top: scrollTop }) => {
+            let top = 0;
+            let right = 0;
+            let bottom = 0;
+            let left = 0;
+            let height = 0;
+            let width = 0;
 
-            console.log('rect', domNode.getBoundingClientRect());
+            if (this.domNode) {
+                const rect = this.domNode.getBoundingClientRect();
+                top = rect.top;
+                right = rect.right;
+                bottom = rect.bottom;
+                left = rect.left;
+                height = rect.height;
+                width = rect.width;
+            }
+
+            this.setState({ scrollTop, top, right, bottom, left, height, width });
         });
+        PreloadService.onReady(() => this.domNode = findDOMNode(this));
     }
 
     render () {
+        const top = this.state.top;
+        const treshold = Math.round(window.innerHeight);
+        const opacity = Math.min(1 - (top / treshold) + 0.25, 1);
+
         return (
-            <div>
+            <div
+                style={{ opacity }}
+            >
                 <VerticalLine />
-                {this.props.children}
+                    {this.props.children}
                 <VerticalLine />
             </div>
         );

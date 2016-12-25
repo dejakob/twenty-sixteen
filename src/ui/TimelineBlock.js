@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VerticalLine from './VerticalLine';
+import { ScrollService } from '../services';
 
 /**
  * <TimelineBlock />
@@ -8,7 +9,14 @@ import VerticalLine from './VerticalLine';
  */
 class TimelineBlock extends Component
 {
+    constructor () {
+        super();
+        ScrollService.on(({ top }) => this.setState({ scrollTop: top }))
+    }
+
     render () {
+        console.log('scrollTop', ScrollService.scrollTop);
+
         return (
             <div>
                 <VerticalLine />

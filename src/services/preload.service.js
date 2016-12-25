@@ -18,15 +18,17 @@ class PreloadService {
             });
         };
 
-        console.log('start preload');
-
         for (let imgSrc of PreloadService._images) {
             await preload(imgSrc);
         }
 
-        console.log('preload done');
+        PreloadService.update();
+    }
 
+    static update () {
         PreloadService._handlers.forEach(handler => handler());
+
+        setTimeout(PreloadService.update, 3000);
     }
 
     static onReady (handler) {

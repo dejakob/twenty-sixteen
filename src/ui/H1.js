@@ -6,7 +6,10 @@ class H1 extends Component
     style = {
         fontFamily: '\'Slabo 27px\', serif',
         fontSize: '36px',
-        color: this.props.color || COLORS.WHITE
+        color: this.props.color || COLORS.WHITE,
+        textAlign: 'center',
+        textShadow: 'rgb(0, 0, 0) 2px 2px 25px',
+        margin: '20px 0'
     };
 
     render () {

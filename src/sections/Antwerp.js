@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Section } from '../ui';
 
-class Tsjing extends Component
+class Antwerp extends Component
 {
     render () {
         return (
             <Section
-                backgroundImage="dist/tsjing.jpg"
+                backgroundImage="dist/falling.jpg"
             >
                 <div></div>
             </Section>
@@ -14,4 +14,4 @@ class Tsjing extends Component
     }
 }
 
-export default Tsjing;
+export default Antwerp;

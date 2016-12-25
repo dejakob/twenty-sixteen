@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Intro, Showpad } from './sections';
+import { Intro, Showpad, Antwerp, Tsjing, Flavr } from './sections';
 
 class TwentySixteen extends Component {
   render() {
@@ -7,6 +7,9 @@ class TwentySixteen extends Component {
         <div>
             <Intro />
             <Showpad />
+            <Antwerp />
+            <Tsjing />
+            <Flavr />
         </div>
     );
   }

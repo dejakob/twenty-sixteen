@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Intro from './Intro';
+import { Intro } from './sections';
 
 class TwentySixteen extends Component {
   render() {

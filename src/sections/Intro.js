@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Section } from './ui';
-import { COLORS } from './constants';
+import { Section } from '../ui';
+import { COLORS } from '../constants';
 import TwentySixteenSvg from '../svg/2016';
 import AccordingToJakez from '../svg/according-to-jakez';
 

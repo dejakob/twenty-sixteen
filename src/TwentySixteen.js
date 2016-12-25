@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Intro } from './sections';
+import { Intro, Showpad } from './sections';
 
 class TwentySixteen extends Component {
   render() {
     return (
         <div>
             <Intro />
+            <Showpad />
         </div>
     );
   }

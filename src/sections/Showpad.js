@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Section, CalendarDay, H1, TimelineBlock, VerticalLine } from '../ui';
-import FacebookProvider, { EmbeddedPost } from 'react-facebook';
+import { Section, CalendarDay, H1, TimelineBlock, VerticalLine, FacebookPost } from '../ui';
 
 class Showpad extends Component
 {
@@ -14,15 +13,27 @@ class Showpad extends Component
                 <TimelineBlock>
                     <CalendarDay
                         month="January"
+                        day={1}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/photo.php?fbid=1012634818775271&set=a.452807001424725.98241.100000862866272&type=3"
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="January"
                         day={10}
                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
-                    <EmbeddedPost href="http://www.facebook.com" width="500" />
-                </TimelineBlock>
-
-                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/dejakob/posts/1017187448320008"
+                    />
                     <H1>
                         Posted my previous year overview
                     </H1>

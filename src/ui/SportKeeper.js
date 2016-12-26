@@ -3,7 +3,7 @@ import { findDOMNode } from 'react-dom';
 import { COLORS } from '../constants';
 import { ScrollService, PreloadService } from '../services';
 
-const TIME_PAR_STAGE = 500;
+const TIME_PAR_STAGE = 200;
 
 /**
  * <SportKeeper />
@@ -27,6 +27,7 @@ class SportKeeper extends Component
         fontWeight: '100'
     };
     static contentStyle = {
+        fontFamily: '\'Slabo 27px\', serif',
         paddingTop: '16px',
         display: 'block',
         fontSize: '24px',
@@ -50,10 +51,7 @@ class SportKeeper extends Component
         ScrollService.on(() => {
             if (this.domNode) {
                 const rect = this.domNode.getBoundingClientRect();
-
-                console.log('top', rect.top);
-
-
+                
                 if (rect.top > 0 && rect.top < window.innerHeight && !this._interval) {
                     this.start();
                 }

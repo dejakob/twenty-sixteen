@@ -23,8 +23,9 @@ class Showpad extends Component
                     />
                 </TimelineBlock>
 
+                <VerticalLine />
+
                 <TimelineBlock>
-                    <H1>I suddenly got into running</H1>
                     <SportKeeper
                         type="Ran"
                         items={[
@@ -34,7 +35,10 @@ class Showpad extends Component
                             { date: '2016-01-10', amount: 10.53, time: 82 }
                         ]}
                     />
+                    <H1>I suddenly got into running</H1>
                 </TimelineBlock>
+
+                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay
@@ -52,6 +56,8 @@ class Showpad extends Component
                     </H1>
                 </TimelineBlock>
 
+                <VerticalLine />
+
                 <TimelineBlock>
                     <CalendarDay
                         month="January"
@@ -61,8 +67,37 @@ class Showpad extends Component
 
                 <TimelineBlock>
                     <H1>
-                        Getting <i className="fa fa-fire-extinguisher" /> at Showpad
+                        Getting <i className="fa fa-fire-extinguisher" /> at Showpad :'(
                     </H1>
+                </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="January"
+                        day={25}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <H1>
+                        My first Star Wars Movie :)
+                    </H1>
+                </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="January"
+                        day={25}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <blockquote className="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/Sparkcentral">@sparkcentral</a> Is this the appropriate way to apply for a job?<a href="https://t.co/W24GBzggSV">https://t.co/W24GBzggSV</a> <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a> <a href="https://twitter.com/hashtag/es2015?src=hash">#es2015</a> <a href="https://twitter.com/hashtag/vanillajs?src=hash">#vanillajs</a> <a href="https://twitter.com/hashtag/hireme?src=hash">#hireme</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/691718095690403840">January 25, 2016</a></blockquote>
+                    <H1>#nevergiveup</H1>
                 </TimelineBlock>
             </Section>
         );

@@ -7,9 +7,9 @@ import { COLORS } from '../constants';
 class VerticalLine extends Component
 {
     style = {
-        height: '25px',
+        height: '30px',
         backgroundColor: this.props.color || COLORS.WHITE,
-        width: this.props.width || '3px',
+        width: this.props.width || '2px',
         position: 'relative',
         margin: '0 auto'
     };

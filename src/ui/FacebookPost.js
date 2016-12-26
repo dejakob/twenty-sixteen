@@ -6,8 +6,6 @@ class FacebookPost extends Component
     render () {
         const width = parseInt(Math.min(window.innerWidth * 0.9, 500));
 
-        console.log('width', width);
-
         return (
             <FacebookProvider
                 appID="1259809074087642"

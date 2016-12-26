@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, CalendarDay, H1, TimelineBlock, VerticalLine, FacebookPost } from '../ui';
+import { Section, CalendarDay, H1, TimelineBlock, VerticalLine, FacebookPost, SportKeeper } from '../ui';
 
 class Showpad extends Component
 {
@@ -25,17 +25,14 @@ class Showpad extends Component
 
                 <TimelineBlock>
                     <H1>I suddenly got into running</H1>
-                    <FacebookPost
-                        href="https://www.facebook.com/dejakob/posts/1013908635314556"
-                    />
-                    <FacebookPost
-                        href="https://www.facebook.com/dejakob/posts/1015473918491361"
-                    />
-                    <FacebookPost
-                        href="https://www.facebook.com/dejakob/posts/1016364668402286"
-                    />
-                    <FacebookPost
-                        href="https://www.facebook.com/dejakob/posts/1017240211648065"
+                    <SportKeeper
+                        type="Ran"
+                        items={[
+                            { date: '2016-01-03', amount: 5, time: 39.06 },
+                            { date: '2016-01-06', amount: 4.82, time: 32.55 },
+                            { date: '2016-01-08', amount: 7, time: 52 },
+                            { date: '2016-01-10', amount: 10.53, time: 82 }
+                        ]}
                     />
                 </TimelineBlock>
 

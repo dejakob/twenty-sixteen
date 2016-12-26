@@ -6,7 +6,7 @@ class Antwerp extends Component
     render () {
         return (
             <Section
-                backgroundImage="dist/falling.jpg"
+                backgroundImage="dist/antwerp.jpg"
             >
                 <div></div>
             </Section>

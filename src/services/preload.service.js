@@ -1,6 +1,7 @@
 class PreloadService {
     static _images = [];
     static _handlers = [];
+    static _loaded = false;
 
     static addImage (imageSrc) {
         PreloadService._images.push(imageSrc);
@@ -22,7 +23,12 @@ class PreloadService {
             await preload(imgSrc);
         }
 
-        setTimeout(PreloadService.update, 5000);
+        const interval = setInterval(function() {
+            if(document.readyState === 'complete') {
+                setTimeout(PreloadService.update, 3000);
+                clearInterval(interval);
+            }
+        }, 100);
     }
 
     static update () {

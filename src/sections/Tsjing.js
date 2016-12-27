@@ -79,6 +79,14 @@ class Tsjing extends Component
                             { date: '2016-05-16', amount: 6.71, time: 35.30 },
                             { date: '2016-05-18', amount: 10.68, time: 59.00 },
                             { date: '2016-05-20', amount: 7.90, time: 45.50 },
+                            { date: '2016-05-24', amount: 12.84, time: 67.10 },
+                            { date: '2016-05-26', amount: 22.69, time: 109.55 },
+                            { date: '2016-05-28', amount: 36.86, time: 158.43 },
+                            { date: '2016-05-31', amount: 30.00, time: 120.48 },
+                            { date: '2016-06-03', amount: 24.29, time: 109.24 },
+                            { date: '2016-06-05', amount: 26.93, time: 106.54 },
+                            { date: '2016-06-07', amount: 14.56, time: 66.52 },
+                            { date: '2016-06-10', amount: 42.21, time: 162.32 },
                         ]}
                     />
                     <H1>I suddenly got into running</H1>

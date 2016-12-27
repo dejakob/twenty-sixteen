@@ -23,6 +23,8 @@ class Antwerp extends Component
                     />
                 </TimelineBlock>
 
+                <VerticalLine />
+
                 <TimelineBlock>
                     <CalendarDay
                         day={27}
@@ -33,6 +35,23 @@ class Antwerp extends Component
                 <TimelineBlock>
                     <H1><i className="fa fa-suitcase"></i> Moved to Antwerp</H1>
                 </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="March"
+                        day={4}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/dejakob/posts/1045631878808898"
+                    />
+                </TimelineBlock>
+
+                <VerticalLine />
             </Section>
         );
     }

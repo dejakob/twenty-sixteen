@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Intro, Showpad, Antwerp, Tsjing, Flavr } from './sections';
+import { H1 } from './ui';
 import { PreloadService } from './services';
 import { COLORS } from './constants';
 
@@ -11,6 +12,9 @@ class TwentySixteen extends Component {
         bottom: 0,
         right: 0,
         backgroundColor: COLORS.BLACK,
+        color: COLORS.WHITE,
+        textAlign: 'center',
+        fontFamily: '\'Slabo 27px\', serif',
         zIndex: 3
     };
 
@@ -46,7 +50,11 @@ class TwentySixteen extends Component {
         return (
             <div
                 style={this.loadingOverlayStyle}
-            ></div>
+            >
+                <H1>Loading the awesome...</H1>
+                <p>It will be so amazing, it's worth the waiting.</p>
+                <p>If you think the loading is taking a long time, think about this: time is relative.</p>
+            </div>
         );
     }
 }

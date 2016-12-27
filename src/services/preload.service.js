@@ -25,7 +25,7 @@ class PreloadService {
 
         const interval = setInterval(function() {
             if(document.readyState === 'complete') {
-                setTimeout(PreloadService.update, 3000);
+                setTimeout(PreloadService.update, 5000);
                 clearInterval(interval);
             }
         }, 100);

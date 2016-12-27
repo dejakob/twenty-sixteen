@@ -22,7 +22,7 @@ class PreloadService {
             await preload(imgSrc);
         }
 
-        PreloadService.update();
+        setTimeout(PreloadService.update, 5000);
     }
 
     static update () {

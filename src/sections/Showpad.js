@@ -76,7 +76,7 @@ class Showpad extends Component
                 <TimelineBlock>
                     <CalendarDay
                         month="January"
-                        day={25}
+                        day={20}
                     />
                 </TimelineBlock>
 

@@ -9,13 +9,11 @@ const OPACITY_HIGH = 0.95;
 
 class Intro extends Component {
     static titleStyle = {
-        height: `${window.innerHeight * 0.5}px`
+        width: '90vw'
     };
 
     static subtitleStyle = {
-        height: '150px',
-        float: 'right',
-        marginRight: '5%'
+        width: '20vw'
     };
 
     componentWillMount () {

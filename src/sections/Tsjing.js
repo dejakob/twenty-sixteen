@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, VerticalLine, TimelineBlock, CalendarDay, FacebookPost, H1 } from '../ui';
+import { Section, VerticalLine, TimelineBlock, CalendarDay, FacebookPost, H1, SportKeeper } from '../ui';
 
 class Tsjing extends Component
 {
@@ -87,9 +87,25 @@ class Tsjing extends Component
                             { date: '2016-06-05', amount: 26.93, time: 106.54 },
                             { date: '2016-06-07', amount: 14.56, time: 66.52 },
                             { date: '2016-06-10', amount: 42.21, time: 162.32 },
+                            { date: '2016-06-12', amount: 14.00, time: 65.03 },
+                            { date: '2016-06-14', amount: 15.03, time: 77.02 },
+                            { date: '2016-06-17', amount: 28.12, time: 131.25 },
+                            { date: '2016-06-19', amount: 24.75, time: 114.14 },
+                            { date: '2016-06-22', amount: 26.29, time: 117.44 },
+                            { date: '2016-06-27', amount: 14.31, time: 68.03 },
+                            { date: '2016-06-30', amount: 14.05, time: 67.39 },
+                            { date: '2016-07-04', amount: 13.61, time: 64.41 },
+                            { date: '2016-07-06', amount: 13.47, time: 67.32 },
+                            { date: '2016-07-09', amount: 31.46, time: 134.17 },
+                            { date: '2016-07-12', amount: 13.91, time: 69.38 },
+                            { date: '2016-07-14', amount: 13.41, time: 69.02 },
+                            { date: '2016-07-16', amount: 14.94, time: 71.47 },
+                            { date: '2016-07-18', amount: 14.21, time: 69.21 },
+                            { date: '2016-07-23', amount: 13.43, time: 71.41 },
+                            { date: '2016-07-27', amount: 13.67, time: 60.37 }
                         ]}
                     />
-                    <H1>I suddenly got into running</H1>
+                    <H1>I suddenly got into inline skating</H1>
                 </TimelineBlock>
 
                 <VerticalLine />

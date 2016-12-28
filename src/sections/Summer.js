@@ -155,6 +155,67 @@ class Summer extends Component
                 </TimelineBlock>
 
                 <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="July"
+                        day={2}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/dejakob/posts/1124747730897312"
+                    />
+                </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="July"
+                        day={21}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/dejakob/videos/1136904436348308/"
+                    />
+                </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="July"
+                        day={23}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/dejakob/posts/1138055649566520"
+                    />
+                </TimelineBlock>
+
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="July"
+                        day={24}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/photo.php?fbid=1138617302843688&set=a.452807001424725.98241.100000862866272&type=3"
+                    />
+                </TimelineBlock>
+
+                <VerticalLine />
             </Section>
         )
     }

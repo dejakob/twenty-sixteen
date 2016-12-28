@@ -3,11 +3,13 @@ import Showpad from './Showpad';
 import Antwerp from './Antwerp';
 import Tsjing from './Tsjing';
 import Flavr from './Flavr';
+import Summer from './Summer';
 
 export {
     Intro,
     Showpad,
     Antwerp,
     Tsjing,
-    Flavr
+    Flavr,
+    Summer
 };

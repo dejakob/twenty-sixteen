@@ -84,6 +84,21 @@ class Summer extends Component
                 <TimelineBlock>
                     <CalendarDay
                         month="June"
+                        day={26}
+                    />
+                </TimelineBlock>
+
+                <TimelineBlock>
+                    <FacebookPost
+                        href="https://www.facebook.com/photo.php?fbid=1120922107946541&set=a.452807001424725.98241.100000862866272&type=3&theater"
+                    />
+                </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <CalendarDay
+                        month="June"
                         day={19}
                     />
                 </TimelineBlock>

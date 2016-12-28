@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, VerticalLine, TimelineBlock, CalendarDay, FacebookPost, H1, SportKeeper } from '../ui';
+import { Section, TimelineBlock, CalendarDay, FacebookPost, H1, SportKeeper } from '../ui';
 
 class Tsjing extends Component
 {
@@ -8,8 +8,6 @@ class Tsjing extends Component
             <Section
                 backgroundImage="dist/tsjing.jpg"
             >
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="April"
@@ -53,8 +51,6 @@ class Tsjing extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="April"
@@ -67,8 +63,6 @@ class Tsjing extends Component
                         href="https://www.facebook.com/dejakob/posts/1079248212113931"
                     />
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <SportKeeper
@@ -108,8 +102,6 @@ class Tsjing extends Component
                     <H1>I suddenly got into inline skating</H1>
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="May"
@@ -122,8 +114,6 @@ class Tsjing extends Component
                         href="https://www.facebook.com/photo.php?fbid=1087258404646245&set=a.452807001424725.98241.100000862866272&type=3&theater"
                     />
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay
@@ -138,8 +128,6 @@ class Tsjing extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="May"
@@ -152,8 +140,6 @@ class Tsjing extends Component
                         href="https://www.facebook.com/photo.php?fbid=1090767490962003&set=a.452807001424725.98241.100000862866272&type=3&theater"
                     />
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay
@@ -168,8 +154,6 @@ class Tsjing extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="May"
@@ -180,8 +164,6 @@ class Tsjing extends Component
                 <TimelineBlock>
                     <blockquote className="twitter-tweet" data-lang="en"><p lang="nl" dir="ltr">Zo brengt <a href="https://twitter.com/NMBS">@NMBS</a> nog wat spanning in m&#39;n leven... <a href="https://t.co/2r82Nh9sQY">pic.twitter.com/2r82Nh9sQY</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/736207989560991750">May 27, 2016</a></blockquote>
                 </TimelineBlock>
-                
-                <VerticalLine />
             </Section>
         );
     }

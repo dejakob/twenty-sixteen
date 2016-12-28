@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, VerticalLine, TimelineBlock, FacebookPost, CalendarDay, H1 } from '../ui';
+import { Section, TimelineBlock, FacebookPost, CalendarDay, H1 } from '../ui';
 
 class Antwerp extends Component
 {
@@ -8,8 +8,6 @@ class Antwerp extends Component
             <Section
                 backgroundImage="dist/antwerp.jpg"
             >
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         day={11}
@@ -23,8 +21,6 @@ class Antwerp extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         day={27}
@@ -35,8 +31,6 @@ class Antwerp extends Component
                 <TimelineBlock>
                     <H1><i className="fa fa-suitcase"></i> Moved to Antwerp</H1>
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay
@@ -51,8 +45,6 @@ class Antwerp extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="March"
@@ -65,8 +57,6 @@ class Antwerp extends Component
                         href="https://www.facebook.com/dejakob/posts/1046359462069473"
                     />
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay
@@ -81,8 +71,6 @@ class Antwerp extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="March"
@@ -96,8 +84,6 @@ class Antwerp extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="March"
@@ -110,8 +96,6 @@ class Antwerp extends Component
                         href="https://www.facebook.com/dejakob/posts/1057500710955348"
                     />
                 </TimelineBlock>
-
-                <VerticalLine />
             </Section>
         );
     }

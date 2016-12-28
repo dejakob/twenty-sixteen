@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, CalendarDay, H1, TimelineBlock, VerticalLine, FacebookPost, SportKeeper } from '../ui';
+import { Section, CalendarDay, H1, TimelineBlock, FacebookPost, SportKeeper } from '../ui';
 
 class Showpad extends Component
 {
@@ -8,8 +8,6 @@ class Showpad extends Component
             <Section
                 backgroundImage="dist/falling.jpg"
             >
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="January"
@@ -23,8 +21,6 @@ class Showpad extends Component
                     />
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <SportKeeper
                         type="Ran"
@@ -37,8 +33,6 @@ class Showpad extends Component
                     />
                     <H1>I suddenly got into running</H1>
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay
@@ -56,8 +50,6 @@ class Showpad extends Component
                     </H1>
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="January"
@@ -71,8 +63,6 @@ class Showpad extends Component
                     </H1>
                 </TimelineBlock>
 
-                <VerticalLine />
-
                 <TimelineBlock>
                     <CalendarDay
                         month="January"
@@ -85,8 +75,6 @@ class Showpad extends Component
                         My first Star Wars Movie :)
                     </H1>
                 </TimelineBlock>
-
-                <VerticalLine />
 
                 <TimelineBlock>
                     <CalendarDay

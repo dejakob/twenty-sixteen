@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment'
 import Avatar from './Avatar';
 import { COLORS } from '../constants';
 
@@ -44,9 +45,14 @@ class FacebookPost extends Component
 
     componentWillMount () {
         this.post = window.facebookFeed.filter(item => item.url === this.props.href)[0];
-        this.message = this.post.message || this.post.description;
+        this.message = this.post.message || this.post.description || this.post.name;
         this.textStyle.fontSize = (this.message && this.message.length < 50) ? '24px' : '16px';
         this.url = this.post.url;
+
+        this.likes = this.post.likes && this.post.likes.data ? this.post.likes.data : null;
+        this.picture = this.post.picture ||
+            ((this.post.images && this.post.images.length) ? this.post.images[0].source : null);
+        this.video = this.post.embed_html;
     }
 
     render () {
@@ -61,25 +67,57 @@ class FacebookPost extends Component
                 <Avatar
                     user="100000862866272"
                     style={FacebookPost.avatarStyle}
-                ></Avatar>
+                />
                 <span
                     style={FacebookPost.facebookBannerStyle}
                 >
                     <i className="fa fa-facebook-official"></i>
                 </span>
-                <pre
-                    style={this.textStyle}
-                >{this.message}</pre>
+
+                {this.renderVideo()}
+                {this.renderPhoto()}
+                {this.renderStatus()}
             </a>
         );
     }
 
-    renderPhoto () {
+    renderVideo () {
+        if (!this.video) {
+            return null;
+        }
 
+        return (
+            <div dangerouslySetInnerHTML={{ __html: this.video }} />
+        )
+    }
+
+    renderPhoto () {
+        if (this.video || !this.picture) {
+            return null;
+        }
+
+        return (
+            <div>
+                <img
+                    src={this.picture}
+                    alt="facebook post image"
+                />
+            </div>
+        );
     }
 
     renderStatus () {
+        if (!this.message || !this.message.length) {
+            return null;
+        }
 
+        return (
+            <pre
+                style={this.textStyle}
+            >
+                {this.message}
+            </pre>
+        )
     }
 }
 

@@ -73,8 +73,6 @@ class FacebookPost extends Component
     }
 
     render () {
-        console.log('post',this.post);
-
         return (
             <a
                 style={this.wrapperStyle}

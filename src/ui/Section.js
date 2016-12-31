@@ -3,15 +3,30 @@ import { PreloadService } from '../services';
 import { COLORS } from '../constants';
 
 class Section extends Component {
-    get style () {
-        return {
-            backgroundColor: COLORS.BLACK,
-            backgroundImage: `url(${this.props.backgroundImage})`,
-            backgroundPosition: 'center center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
+    get fallback () {
+        switch (this.props.backgroundImage) {
+            case 'dist/fire.jpeg':
+                return 'url(dist/fire.jpeg) 100% center';
 
+            case 'dist/falling.jpg':
+                return 'linear-gradient(to left, #43cea2 , #185a9d)';
+
+            case 'dist/antwerp.jpg':
+                return 'linear-gradient(to left, #2c3e50 , #3498db)';
+
+            case 'dist/dutchie.jpg':
+                return 'linear-gradient(to left, #7b4397 , #dc2430)';
+
+            case 'dist/flavr-team.jpg':
+                return 'linear-gradient(to left, #136a8a , #267871)';
+
+            case 'dist/tsjing.jpg':
+                return 'linear-gradient(to left, #517fa4 , #243949)';
+        }
+    }
+
+    get style () {
+        const style = {
             minHeight: `${window.innerHeight}px`,
             display: 'flex',
             flexDirection: 'column',
@@ -20,6 +35,19 @@ class Section extends Component {
 
             position: 'relative'
         };
+
+        if (window.innerWidth > 960) {
+            style.backgroundImage = `url(${this.props.backgroundImage})`;
+            style.backgroundPosition = 'center center';
+            style.backgroundSize = 'cover';
+            style.backgroundRepeat = 'no-repeat';
+            style.backgroundAttachment = 'fixed';
+        }
+        else {
+            style.background = this.fallback;
+        }
+
+        return style;
     }
 
     get overlayStyle () {
@@ -50,7 +78,9 @@ class Section extends Component {
     }
 
     componentWillMount () {
-        PreloadService.addImage(this.props.backgroundImage);
+        if (window.innerWidth > 960) {
+            PreloadService.addImage(this.props.backgroundImage);
+        }
     }
 
     render () {

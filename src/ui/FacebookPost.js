@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import FacebookProvider, { EmbeddedPost } from 'react-facebook';
 
+// window.facebookFeed
+
 class FacebookPost extends Component
 {
     render () {
-        const width = parseInt(Math.min(window.innerWidth * 0.9, 500));
+
+        console.log('data', window.facebookFeed.filter(item => item.link === this.props.href));
 
         return (
-            <FacebookProvider
-                appID="1259809074087642"
-            >
-                <EmbeddedPost
-                    href={this.props.href}
-                    width={width}
-                />
-            </FacebookProvider>
+            <div></div>
         );
+    }
+
+    renderPhoto () {
+
+    }
+
+    renderStatus () {
+
     }
 }
 

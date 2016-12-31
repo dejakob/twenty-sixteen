@@ -46,3 +46,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+pre:before {
+    content: open-quote;
+}
+pre:after {
+    content: close-quote;
+}

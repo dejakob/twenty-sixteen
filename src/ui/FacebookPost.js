@@ -9,11 +9,13 @@ class FacebookPost extends Component
         border: `2px ${COLORS.FACEBOOK_COLOR} solid`,
         width: '90%',
         minWidth: '350px',
-        maxWidth: '600px',
+        maxWidth: '500px',
         margin: '0 auto',
         position: 'relative',
         paddingBottom: '30px',
-        borderRadius: '3px'
+        borderRadius: '3px',
+        textDecoration: 'none',
+        display: 'block'
     };
     textStyle = {
         fontFamily: '"Slabo 27px", serif',
@@ -44,14 +46,17 @@ class FacebookPost extends Component
         this.post = window.facebookFeed.filter(item => item.url === this.props.href)[0];
         this.message = this.post.message || this.post.description;
         this.textStyle.fontSize = (this.message && this.message.length < 50) ? '24px' : '16px';
+        this.url = this.post.url;
     }
 
     render () {
         console.log('post',this.post);
 
         return (
-            <div
+            <a
                 style={FacebookPost.wrapperStyle}
+                href={this.url}
+                target="_blank"
             >
                 <Avatar
                     user="100000862866272"
@@ -65,7 +70,7 @@ class FacebookPost extends Component
                 <pre
                     style={this.textStyle}
                 >{this.message}</pre>
-            </div>
+            </a>
         );
     }
 

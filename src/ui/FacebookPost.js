@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment'
 import Avatar from './Avatar';
 import { COLORS } from '../constants';
 
@@ -9,11 +8,10 @@ class FacebookPost extends Component
         backgroundColor: COLORS.WHITE,
         border: `2px ${COLORS.FACEBOOK_COLOR} solid`,
         width: '90vw',
-        minWidth: '350px',
+        minWidth: '250px',
         maxWidth: '500px',
         margin: '0 auto',
         position: 'relative',
-        paddingBottom: '30px',
         borderRadius: '3px',
         textDecoration: 'none',
         display: 'block'
@@ -22,6 +20,7 @@ class FacebookPost extends Component
         fontFamily: '"Slabo 27px", serif',
         padding: '0 20px',
         marginTop: '20px',
+        marginBottom: '30px',
         fontSize: '24px',
         fontStyle: 'italic',
         whiteSpace: 'pre-line',
@@ -42,6 +41,10 @@ class FacebookPost extends Component
         padding: '10px',
         color: COLORS.WHITE
     };
+    static mediaWrapperStyle = {
+        fontSize: 0,
+        backgroundColor: COLORS.BLACK
+    };
 
     componentWillMount () {
         this.post = window.facebookFeed.filter(item => item.url === this.props.href)[0];
@@ -56,6 +59,16 @@ class FacebookPost extends Component
 
         if (this.picture || this.video) {
             this.wrapperStyle.maxWidth = '750px';
+        }
+
+        if (this.post.place && this.post.place.id && this.post.place.name) {
+            if (!this.picture) {
+                this.picture = `https://graph.facebook.com/${this.post.place.id}/picture?type=large`;
+            }
+
+            if (!this.message || !this.message.length) {
+                this.message = `I\'m at ${this.post.place.name}`;
+            }
         }
     }
 
@@ -91,7 +104,10 @@ class FacebookPost extends Component
         }
 
         return (
-            <div dangerouslySetInnerHTML={{ __html: this.video }} />
+            <div
+                style={FacebookPost.mediaWrapperStyle}
+                dangerouslySetInnerHTML={{ __html: this.video }}
+            />
         )
     }
 
@@ -101,7 +117,9 @@ class FacebookPost extends Component
         }
 
         return (
-            <div>
+            <div
+                style={FacebookPost.mediaWrapperStyle}
+            >
                 <img
                     style={{ width: '100%' }}
                     src={this.picture}

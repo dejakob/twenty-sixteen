@@ -53,3 +53,6 @@ pre:before {
 pre:after {
     content: close-quote;
 }
+iframe {
+    width: 100%;
+}

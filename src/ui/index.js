@@ -1,3 +1,4 @@
+import Avatar from './Avatar';
 import Section from './Section';
 import CalendarDay from './CalendarDay';
 import H1 from './H1';
@@ -7,6 +8,7 @@ import FacebookPost from './FacebookPost';
 import SportKeeper from './SportKeeper';
 
 export {
+    Avatar,
     Section,
     CalendarDay,
     H1,

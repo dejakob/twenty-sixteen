@@ -1625,6 +1625,7 @@ window.facebookFeed = [
         },
         "start_date": "2016-08-20",
         "id": "1160829260622492",
+        "message": "Started working at FLAVR",
         "__debug__": {},
         "url": "https://www.facebook.com/dejakob/timeline/story?ut=32&wstart=-2051193600&wend=2147483647&hash=1160829260622492&pagefilter=3&ustart=1",
         "type": "timeline"
@@ -1746,13 +1747,12 @@ window.facebookFeed = [
         "type": "status"
     },
     {
-        "error": {
-            "message": "Unsupported get request. Object with ID '1119559418082810' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
-            "type": "GraphMethodException",
-            "code": 100,
-            "fbtrace_id": "A8eJVzLLNqD"
-        },
-        "__debug__": {},
+        "images": [
+            {
+                source: "https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/13524538_10153756313887194_7657598148630904962_n.jpg?oh=b6015b8dfc5a7d90d7485d8517fcac2e&oe=58D8BACF"
+            }
+        ],
+        "message": "Isn't it ironic, don't you think?",
         "url": "https://www.facebook.com/dejakob/posts/1119559418082810",
         "type": "status"
     },

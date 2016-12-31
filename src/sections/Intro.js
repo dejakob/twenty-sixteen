@@ -13,7 +13,8 @@ class Intro extends Component {
     };
 
     static subtitleStyle = {
-        width: '20vw'
+        width: '20vw',
+        minWidth: '200px'
     };
 
     componentWillMount () {

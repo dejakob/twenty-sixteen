@@ -28,7 +28,7 @@ class PreloadService {
                 PreloadService.update();
                 clearInterval(interval);
             }
-        }, 100);
+        }, 2000);
     }
 
     static update () {

@@ -7,7 +7,7 @@ class FacebookPost extends Component
 {
     render () {
 
-        console.log('data', window.facebookFeed.filter(item => item.link === this.props.href));
+        console.log('data', window.facebookFeed.filter(item => item.url === this.props.href)[0], this.props.href);
 
         return (
             <div></div>

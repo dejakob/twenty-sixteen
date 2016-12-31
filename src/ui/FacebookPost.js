@@ -5,10 +5,10 @@ import { COLORS } from '../constants';
 
 class FacebookPost extends Component
 {
-    static wrapperStyle = {
+    wrapperStyle = {
         backgroundColor: COLORS.WHITE,
         border: `2px ${COLORS.FACEBOOK_COLOR} solid`,
-        width: '90%',
+        width: '90vw',
         minWidth: '350px',
         maxWidth: '500px',
         margin: '0 auto',
@@ -50,9 +50,13 @@ class FacebookPost extends Component
         this.url = this.post.url;
 
         this.likes = this.post.likes && this.post.likes.data ? this.post.likes.data : null;
-        this.picture = this.post.picture ||
-            ((this.post.images && this.post.images.length) ? this.post.images[0].source : null);
+        this.picture = ((this.post.images && this.post.images.length) ? this.post.images[0].source : null) ||
+            this.picture;
         this.video = this.post.embed_html;
+
+        if (this.picture || this.video) {
+            this.wrapperStyle.maxWidth = '750px';
+        }
     }
 
     render () {
@@ -60,7 +64,7 @@ class FacebookPost extends Component
 
         return (
             <a
-                style={FacebookPost.wrapperStyle}
+                style={this.wrapperStyle}
                 href={this.url}
                 target="_blank"
             >
@@ -99,6 +103,7 @@ class FacebookPost extends Component
         return (
             <div>
                 <img
+                    style={{ width: '100%' }}
                     src={this.picture}
                     alt="facebook post image"
                 />

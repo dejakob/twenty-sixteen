@@ -56,7 +56,7 @@ class FacebookPost extends Component
     componentWillMount () {
         this.post = window.facebookFeed.filter(item => item.url === this.props.href)[0];
         this.message = this.post.message || this.post.description || this.post.name;
-        this.textStyle.fontSize = (this.message && this.message.length < 50) ? '24px' : '16px';
+        this.textStyle.fontSize = (this.message && this.message.length < 120) ? '24px' : '16px';
         this.url = this.post.url;
 
         this.likes = this.post.likes && this.post.likes.data ? this.post.likes.data : null;

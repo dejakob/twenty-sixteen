@@ -9,7 +9,9 @@ class Avatar extends Component
     };
 
     componentWillMount () {
-        this.src = `https://graph.facebook.com/${this.props.user}/picture${this.props.large ? '?type=large' : ''}`;
+        this.src = this.props.user ?
+            `https://graph.facebook.com/${this.props.user}/picture${this.props.large ? '?type=large' : ''}` :
+            this.props.url;
     }
 
     render () {

@@ -3,5 +3,7 @@ export default {
     WHITE: '#ffffff',
     PRIMARY_FONT_COLOR: '#2d2d42',
     FACEBOOK_COLOR: '#3b5998',
-    FACEBOOK_COLOR_LIGHT: '#e1e8ed'
+    FACEBOOK_COLOR_LIGHT: '#e1e8ed',
+    TWITTER_COLOR: '#00aced',
+    TWITTER_COLOR_LIGHT: '#c0deed'
 };

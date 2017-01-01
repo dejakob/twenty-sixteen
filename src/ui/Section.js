@@ -5,8 +5,8 @@ import { COLORS } from '../constants';
 class Section extends Component {
     get fallback () {
         switch (this.props.backgroundImage) {
-            case 'dist/fire.jpg':
-                return 'url(dist/fire-mobile.jpg) 100% center';
+            case 'dist/fire.jpeg':
+                return 'url(dist/fire-mobile.jpg)';
 
             case 'dist/falling.jpg':
                 return 'linear-gradient(to left, #43cea2 , #185a9d)';
@@ -45,6 +45,7 @@ class Section extends Component {
         }
         else {
             style.background = this.fallback;
+            style.backgroundSize = 'cover';
         }
 
         return style;

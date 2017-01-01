@@ -8,5 +8,6 @@ export default {
     TWITTER_COLOR_LIGHT: '#c0deed',
     TWITTER_COLOR_XLIGHT: '#d0eefd',
     FLAVR: '#26a69a',
-    FLAVR_LIGHT: '#56d6ca'
+    FLAVR_LIGHT: '#56d6ca',
+    RUNKEEPER_COLOR: '#2DC9D7'
 };

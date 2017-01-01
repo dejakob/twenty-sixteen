@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { COLORS } from '../constants';
 import { ScrollService, PreloadService } from '../services';
+import { Avatar } from '../ui';
 
 const TIME_PAR_STAGE = 200;
 
@@ -14,24 +15,41 @@ const TIME_PAR_STAGE = 200;
 class SportKeeper extends Component
 {
     static style = {
+        border: `3px ${COLORS.RUNKEEPER_COLOR} solid`,
         backgroundColor: COLORS.WHITE,
-        color: COLORS.BLACK,
+        color: COLORS.PRIMARY_FONT_COLOR,
         fontFamily: '\'Lato\', sans-serif',
         fontSize: '18px',
-        padding: '20px',
-        borderRadius: '3px'
+        borderRadius: '3px',
+        display: 'block',
+        textDecoration: 'none',
+        position: 'relative'
+    };
+    static avatarStyle = {
+        position: 'absolute',
+        top: '-26px',
+        marginLeft: '-26px',
+        left: '50%'
+    };
+    static bannerStyle = {
+        backgroundColor: COLORS.RUNKEEPER_COLOR,
+        display: 'block',
+        textAlign: 'right',
+        height: '16px',
+        padding: '10px'
     };
     static dateStyle = {
-        textAlign: 'right',
+        textAlign: 'center',
         display: 'block',
-        fontWeight: '100'
+        fontWeight: '600',
+        margin: '30px 10px'
     };
     static contentStyle = {
         fontFamily: '\'Slabo 27px\', serif',
-        paddingTop: '16px',
         display: 'block',
         fontSize: '24px',
         textAlign: 'center',
+        marginBottom: '30px',
         color: '#666'
     };
     static emStyle = {
@@ -89,20 +107,38 @@ class SportKeeper extends Component
 
     render () {
         return (
-            <div
+            <a
+                href="https://runkeeper.com/user/dejakob"
+                target="_blank"
                 style={SportKeeper.style}
             >
                 <span
-                    style={SportKeeper.dateStyle}
+                    style={SportKeeper.bannerStyle}
                 >
-                    { this.state.date }
+                    <img
+                        src="dist/runkeeper.png"
+                        alt="Runkeeper logo"
+                        height="16"
+                    />
                 </span>
-                <span
-                    style={SportKeeper.contentStyle}
-                >
-                    { this.props.type } <em style={SportKeeper.emStyle}>{ this.state.value }km</em> in { this.state.time }min
-                </span>
-            </div>
+                <Avatar
+                    user="100000862866272"
+                    style={SportKeeper.avatarStyle}
+                />
+
+                <div>
+                    <span
+                        style={SportKeeper.dateStyle}
+                    >
+                        { this.state.date }
+                    </span>
+                    <span
+                        style={SportKeeper.contentStyle}
+                    >
+                        { this.props.type } <em style={SportKeeper.emStyle}>{ this.state.value }km</em> in { this.state.time }min
+                    </span>
+                </div>
+            </a>
         );
     }
 }

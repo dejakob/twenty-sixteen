@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Intro, Showpad, Antwerp, Tsjing, Flavr, Summer } from './sections';
+import { Intro, Showpad, Antwerp, Tsjing, Flavr, Summer, Outro } from './sections';
 import { H1 } from './ui';
 import { PreloadService } from './services';
 import { COLORS } from './constants';
@@ -37,6 +37,7 @@ class TwentySixteen extends Component {
                 <Tsjing />
                 <Summer />
                 <Flavr />
+                <Outro />
 
                 {this.renderLoadingOverlay()}
             </div>

@@ -146,16 +146,6 @@ class Flavr extends Component
                 </TimelineBlock>
 
                 <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
-                <VerticalLine />
             </Section>
         );
     }

@@ -4,6 +4,7 @@ import Antwerp from './Antwerp';
 import Tsjing from './Tsjing';
 import Flavr from './Flavr';
 import Summer from './Summer';
+import Outro from './Outro';
 
 export {
     Intro,
@@ -11,5 +12,6 @@ export {
     Antwerp,
     Tsjing,
     Flavr,
-    Summer
+    Summer,
+    Outro
 };

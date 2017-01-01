@@ -7,6 +7,7 @@ import VerticalLine from './VerticalLine';
 import FacebookPost from './FacebookPost';
 import SportKeeper from './SportKeeper';
 import Tweet from './Tweet';
+import FlavrOverview from './FlavrOverview';
 
 export {
     Avatar,
@@ -17,5 +18,6 @@ export {
     VerticalLine,
     FacebookPost,
     SportKeeper,
-    Tweet
+    Tweet,
+    FlavrOverview
 };

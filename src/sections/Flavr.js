@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, TimelineBlock, CalendarDay, FacebookPost, Tweet } from '../ui';
+import { Section, TimelineBlock, CalendarDay, FacebookPost, Tweet, FlavrOverview, VerticalLine } from '../ui';
 
 class Flavr extends Component
 {
@@ -137,6 +137,25 @@ class Flavr extends Component
                         href="https://www.facebook.com/dejakob/posts/1283819698323447"
                     />
                 </TimelineBlock>
+
+                <VerticalLine />
+
+                <TimelineBlock>
+                    <FlavrOverview
+                    />
+                </TimelineBlock>
+
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
+                <VerticalLine />
             </Section>
         );
     }

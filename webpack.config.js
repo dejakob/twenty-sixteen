@@ -5,6 +5,7 @@ module.exports = {
         'babel-polyfill',
         './tweets.js',
         './facebook-feed.js',
+        './past-orders.js',
         './src/index.js'
     ],
     module: {

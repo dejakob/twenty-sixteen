@@ -11,10 +11,15 @@ class Intro extends Component {
     static titleStyle = {
         width: '90vw'
     };
-
     static subtitleStyle = {
         width: '20vw',
         minWidth: '200px'
+    };
+    static scrollDownStyle = {
+        color: COLORS.WHITE,
+        position: 'absolute',
+        bottom: '30px',
+        fontSize: '24px'
     };
 
     componentWillMount () {
@@ -37,7 +42,7 @@ class Intro extends Component {
                 backgroundImage="dist/fire.jpeg"
             >
                 <div
-                    style={{ display: 'flex', justifyContent: 'center' }}
+                    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', maxWidth: '500px' }}
                 >
                     <TwentySixteenSvg
                         color={COLORS.WHITE}
@@ -48,6 +53,12 @@ class Intro extends Component {
                     color={COLORS.WHITE}
                     style={Intro.subtitleStyle}
                 />
+
+                <span
+                    style={Intro.scrollDownStyle}
+                >
+                    <i className="fa fa-angle-double-down"></i>
+                </span>
             </Section>
         );
     }

@@ -19,8 +19,7 @@ class FacebookPost extends Component
     textStyle = {
         fontFamily: '"Slabo 27px", serif',
         padding: '0 20px',
-        marginTop: '20px',
-        marginBottom: '30px',
+        margin: '40px 0',
         fontSize: '24px',
         fontStyle: 'italic',
         whiteSpace: 'pre-line',
@@ -44,6 +43,14 @@ class FacebookPost extends Component
     static mediaWrapperStyle = {
         fontSize: 0,
         backgroundColor: COLORS.BLACK
+    };
+    static likesStyle = {
+        padding: '10px',
+        backgroundColor: COLORS.FACEBOOK_COLOR_LIGHT
+    };
+    static likeStyle = {
+        height: '40px',
+        width: '40px',
     };
 
     componentWillMount () {
@@ -92,6 +99,7 @@ class FacebookPost extends Component
                 {this.renderVideo()}
                 {this.renderPhoto()}
                 {this.renderStatus()}
+                {this.renderLikes()}
             </a>
         );
     }
@@ -139,6 +147,30 @@ class FacebookPost extends Component
                 {this.message}
             </pre>
         )
+    }
+
+    renderLikes () {
+        if (!this.likes || !this.likes.length) {
+            return null;
+        }
+
+        return (
+            <div
+                style={FacebookPost.likesStyle}
+            >
+                {this.likes.map(this.renderLike)}
+            </div>
+        );
+    }
+
+    renderLike (like) {
+        return (
+            <Avatar
+                key={like.id}
+                user={like.id}
+                style={FacebookPost.likeStyle}
+            />
+        );
     }
 }
 

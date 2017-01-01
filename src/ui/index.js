@@ -6,6 +6,7 @@ import TimelineBlock from './TimelineBlock';
 import VerticalLine from './VerticalLine';
 import FacebookPost from './FacebookPost';
 import SportKeeper from './SportKeeper';
+import Tweet from './Tweet';
 
 export {
     Avatar,
@@ -15,5 +16,6 @@ export {
     TimelineBlock,
     VerticalLine,
     FacebookPost,
-    SportKeeper
+    SportKeeper,
+    Tweet
 };

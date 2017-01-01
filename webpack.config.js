@@ -1,5 +1,12 @@
+const webpack = require('webpack');
+
 module.exports = {
-    entry: ['babel-polyfill', './src/index.js'],
+    entry: [
+        'babel-polyfill',
+        './tweets.js',
+        './facebook-feed.js',
+        './src/index.js'
+    ],
     module: {
         loaders: [
             {
@@ -19,5 +26,19 @@ module.exports = {
     },
     output: {
         filename: './dist/twenty-sixteen.js'
-    }
+    },
+    plugins: [
+        /*
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
+        */
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
+    ]
 };

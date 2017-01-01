@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, CalendarDay, TimelineBlock, FacebookPost } from '../ui';
+import { Section, CalendarDay, TimelineBlock, FacebookPost, Tweet } from '../ui';
 
 class Summer extends Component
 {
@@ -16,7 +16,9 @@ class Summer extends Component
                 </TimelineBlock>
 
                 <TimelineBlock>
-                    <blockquote className="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">My commit is officially part of <a href="https://twitter.com/hashtag/reactnative?src=hash">#reactnative</a> <a href="https://twitter.com/hashtag/soproud?src=hash">#soproud</a><a href="https://t.co/kg8ijmVW91">https://t.co/kg8ijmVW91</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/738276658797502464">June 2, 2016</a></blockquote>
+                    <Tweet
+                        id="738276658797502464"
+                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
@@ -40,7 +42,9 @@ class Summer extends Component
                 </TimelineBlock>
 
                 <TimelineBlock>
-                    <blockquote className="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Just completed a 42.21 km skate with Runkeeper. Check it out! <a href="https://t.co/59waiusFHb">https://t.co/59waiusFHb</a> <a href="https://twitter.com/hashtag/Runkeeper?src=hash">#Runkeeper</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/741357178678841344">June 10, 2016</a></blockquote>
+                    <Tweet
+                        id="741357178678841344"
+                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
@@ -135,7 +139,9 @@ class Summer extends Component
                 </TimelineBlock>
 
                 <TimelineBlock>
-                    <blockquote className="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Welcome to Miami uhhh Antwerp <a href="https://twitter.com/hashtag/sf16?src=hash">#sf16</a> <a href="https://t.co/wxM7nVg6iX">pic.twitter.com/wxM7nVg6iX</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/749578935520858112">July 3, 2016</a></blockquote>
+                    <Tweet
+                        id="749578935520858112"
+                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
@@ -224,7 +230,9 @@ class Summer extends Component
                 </TimelineBlock>
 
                 <TimelineBlock>
-                    <blockquote className="twitter-tweet" data-lang="en"><p lang="nl" dir="ltr">Meanwhile at <a href="https://twitter.com/hashtag/PKP16?src=hash">#PKP16</a> : komt iemand naar mij en vraagt &#39;eeeei hebt gij pille? Grmpf&#39;. -&gt; &#39;Nee, sry, ben net af van mijn hooikoorts&#39;</p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/766181947295039488">August 18, 2016</a></blockquote>
+                    <Tweet
+                        id="766181947295039488"
+                     />
                 </TimelineBlock>
 
                 <TimelineBlock>

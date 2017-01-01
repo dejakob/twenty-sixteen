@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, CalendarDay, H1, TimelineBlock, FacebookPost, SportKeeper } from '../ui';
+import { Section, CalendarDay, H1, TimelineBlock, FacebookPost, SportKeeper, Tweet } from '../ui';
 
 class Showpad extends Component
 {
@@ -84,7 +84,9 @@ class Showpad extends Component
                 </TimelineBlock>
 
                 <TimelineBlock>
-                    <blockquote className="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/Sparkcentral">@sparkcentral</a> Is this the appropriate way to apply for a job?<a href="https://t.co/W24GBzggSV">https://t.co/W24GBzggSV</a> <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a> <a href="https://twitter.com/hashtag/es2015?src=hash">#es2015</a> <a href="https://twitter.com/hashtag/vanillajs?src=hash">#vanillajs</a> <a href="https://twitter.com/hashtag/hireme?src=hash">#hireme</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/691718095690403840">January 25, 2016</a></blockquote>
+                    <Tweet
+                        id="691718095690403840"
+                     />
                     <H1>#nevergiveup</H1>
                 </TimelineBlock>
             </Section>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, TimelineBlock, CalendarDay, FacebookPost, H1, SportKeeper } from '../ui';
+import { Section, TimelineBlock, CalendarDay, FacebookPost, H1, SportKeeper, Tweet } from '../ui';
 
 class Tsjing extends Component
 {
@@ -162,7 +162,9 @@ class Tsjing extends Component
                 </TimelineBlock>
                 
                 <TimelineBlock>
-                    <blockquote className="twitter-tweet" data-lang="en"><p lang="nl" dir="ltr">Zo brengt <a href="https://twitter.com/NMBS">@NMBS</a> nog wat spanning in m&#39;n leven... <a href="https://t.co/2r82Nh9sQY">pic.twitter.com/2r82Nh9sQY</a></p>&mdash; Jakob Kerkhove (@dejakob) <a href="https://twitter.com/dejakob/status/736207989560991750">May 27, 2016</a></blockquote>
+                    <Tweet
+                        id="736207989560991750"
+                     />
                 </TimelineBlock>
             </Section>
         );

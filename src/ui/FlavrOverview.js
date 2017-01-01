@@ -70,6 +70,16 @@ class FlavrOverview extends Component
         alignItems: 'center',
         height: '80px'
     };
+    static footerStyle = {
+        padding: '10px',
+        backgroundColor: COLORS.FLAVR_LIGHT,
+        color: COLORS.WHITE,
+        fontFamily: '"Lato", sans-serif',
+        fontWeight: '100'
+    };
+    static footerEmStyle = {
+        fontWeight: '600'
+    };
 
     componentWillMount () {
         this.state = { width: window.innerWidth };
@@ -146,6 +156,12 @@ class FlavrOverview extends Component
                         </figure>
                     </a>
                     )}
+                </div>
+
+                <div
+                    style={FlavrOverview.footerStyle}
+                >
+                    Want a coupon of 6 EUR? Try <em style={FlavrOverview.footerEmStyle}>FLAVRJAKOB</em> on your first order!
                 </div>
             </div>
         );

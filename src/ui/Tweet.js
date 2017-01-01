@@ -66,8 +66,6 @@ class Tweet extends Component
         this.picture = this.tweet.user.profile_image_url_https;
         this.text = this.tweet.text;
         this.url = `https://twitter.com/dejakob/status/${this.props.id}`;
-
-        console.log('tweet', this.tweet);
     }
 
     render () {

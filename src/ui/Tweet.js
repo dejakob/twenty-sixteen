@@ -40,8 +40,24 @@ class Tweet extends Component
         color: COLORS.PRIMARY_FONT_COLOR,
         backgroundColor: COLORS.WHITE
     };
+    static statsWrapperStyle = {
+        padding: '10px',
+        backgroundColor: COLORS.TWITTER_COLOR_XLIGHT
+    };
+    static statStyle = {
+        display: 'inline-block',
+        marginRight: '10px',
+        color: COLORS.TWITTER_COLOR,
+        fontFamily: '"Lato", sans-serif'
+    };
+    static statIconStyle = {
+        marginRight: '5px'
+    };
     videoBgStyle = {
         backgroundColor: COLORS.BLACK,
+        width: '100%'
+    };
+    pictureStyle = {
         width: '100%'
     };
 
@@ -49,8 +65,9 @@ class Tweet extends Component
         this.tweet = window.tweets.filter(tweet => tweet.id_str === this.props.id)[0];
         this.picture = this.tweet.user.profile_image_url_https;
         this.text = this.tweet.text;
+        this.url = `https://twitter.com/dejakob/status/${this.props.id}`;
 
-        // console.log('tweet', this.tweet);
+        console.log('tweet', this.tweet);
     }
 
     render () {
@@ -77,25 +94,25 @@ class Tweet extends Component
                 >
                     {this.text}
                 </p>
+
+                {this.renderStats()}
             </a>
         );
     }
 
     renderMedia () {
-        if (!this.tweet.entities.media || !this.tweet.entities.media.length) {
-            return null;
-        }
-
-        const { extended_entities } = this.tweet;
-        const video = extended_entities &&
-            extended_entities.media &&
-            extended_entities.media.length &&
-            extended_entities.media[0].video_info &&
-            extended_entities.media[0].video_info.variants &&
-            extended_entities.media[0].video_info.variants.length &&
-            extended_entities.media[0].video_info.variants.map(mapVideoSource);
+        const { entities, extended_entities } = this.tweet;
+        const video = getVideo();
+        const picture = getPicture();
         
         if (video) {
+            if (picture) {
+                this.videoBgStyle.backgroundImage = `url(${picture})`;
+                this.videoBgStyle.backgroundSize = 'cover';
+                this.videoBgStyle.backgroundPosition = 'center center';
+                this.videoBgStyle.backgroundRepeat = 'no-repeat';
+            }
+
             return (
                 <video
                     controls
@@ -105,13 +122,34 @@ class Tweet extends Component
                 </video>
             )
         }
+        else if (picture) {
+            return (
+                <img
+                    src={picture}
+                    alt="tweet"
+                    style={this.pictureStyle}
+                />
+            )
+        }
 
-        console.log('media', this.tweet.entities, this.tweet.extended_entities,video);
+        return null;
 
+        function getPicture () {
+            return entities &&
+                entities.media &&
+                entities.media.length &&
+                entities.media[0].media_url_https;
+        }
 
-        return (
-            <div></div>
-        );
+        function getVideo () {
+            return extended_entities &&
+                extended_entities.media &&
+                extended_entities.media.length &&
+                extended_entities.media[0].video_info &&
+                extended_entities.media[0].video_info.variants &&
+                extended_entities.media[0].video_info.variants.length &&
+                extended_entities.media[0].video_info.variants.map(mapVideoSource);
+        }
 
         function mapVideoSource (variant, index) {
             return (
@@ -122,6 +160,27 @@ class Tweet extends Component
                 />
             );
         }
+    }
+
+    renderStats () {
+        return (
+            <div
+                style={Tweet.statsWrapperStyle}
+            >
+                <span
+                    style={Tweet.statStyle}
+                >
+                    <i className="fa fa-star" style={Tweet.statIconStyle}></i>
+                    {this.tweet.favorite_count}
+                </span>
+                <span
+                    style={Tweet.statStyle}
+                >
+                    <i className="fa fa-retweet" style={Tweet.statIconStyle}></i>
+                    {this.tweet.retweet_count}
+                </span>
+            </div>
+        );
     }
 }
 

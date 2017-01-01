@@ -49,28 +49,15 @@ class Flavr extends Component
 
                 <TimelineBlock>
                     <CalendarDay
-                        month="September"
-                        day={28}
-                    />
-                </TimelineBlock>
-
-                <TimelineBlock>
-<Tweet 
-	id="781216695482454017"
- />
-                </TimelineBlock>
-
-                <TimelineBlock>
-                    <CalendarDay
                         month="October"
                         day={2}
                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
-<Tweet 
-	id="782639453034733568"
- />
+                    <Tweet
+                        id="782639453034733568"
+                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
@@ -81,9 +68,9 @@ class Flavr extends Component
                 </TimelineBlock>
 
                 <TimelineBlock>
-<Tweet 
-	id="789530300653142016"
- />
+                    <Tweet
+                        id="789530300653142016"
+                     />
                 </TimelineBlock>
 
                 <TimelineBlock>
